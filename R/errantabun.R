@@ -1,6 +1,6 @@
 #' Errant Abundance Matrix Function
 #'
-#' This function allows one to create an errant abundance matrix using an original abundance matrix and a random statistical distribution of choice.
+#' This function allows for the calculation of an errant abundance matrix using an original abundance matrix and a random statistical distribution of choice.
 #'
 #' @param abun_matrix The original abundance matrix. Columns must represent species, and rows must represent plots/blocks/etc.
 #' @param method The statistical distribution of choice: "Poisson" or "binomial".
@@ -8,13 +8,14 @@
 #'
 #' @keywords errant, abundance, distribution, Poisson, binomial, random
 #'
-#' @export
+#' @import magrittr, stats
+#' @importFrom dplyr funs rename rename_all
 #'
 #' @examples
+#' errantabun(abun_matrix = ksr, method = "Poisson", prob = 0.8)
 #'
+#' @export
 #' errantabun
-
-
 
 errantabun <- function(abun_matrix, method, prob){
   list_errant_abun <- list()
@@ -30,7 +31,7 @@ errantabun <- function(abun_matrix, method, prob){
     }
   }
   return(data.frame((list_errant_abun)) %>%
-           rename_all(funs(quo(colnames(abun_matrix)))) %>%
-           cbind(rownames(abun_matrix), .) %>%
-           rename("Plot" = "rownames(abun_matrix)"))
+    rename_all(funs(quo(colnames(abun_matrix)))) %>%
+    cbind(rownames(abun_matrix), .) %>%
+    rename("Plot" = "rownames(abun_matrix)"))
 }
