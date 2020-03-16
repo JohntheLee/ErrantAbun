@@ -2,7 +2,7 @@ Package: ErrantAbun
 Type: Package
 Title: Calculation of an Abundance Matrix using a Randomized Distribution
 Version: 0.1.1
-Author@R: person("Jeonghoon", "Lee", email = "jeonghoon.lee@mail.utoronto.ca", role = c("aut", "cre"))
+Authors@R: person("Jeonghoon", "Lee", email = "jeonghoon.lee@mail.utoronto.ca", role = c("aut", "cre"))
 Description: This package contains the "errantabun" function which produces an errant abundance matrix.
     This errant abundance matrix is calculated from an original abundance matrix and a randomized, statistical distribution.
     This package also contains an abundance matrix collected from the Koffler Scientific Reserve: an assembly of grassland plant species.
