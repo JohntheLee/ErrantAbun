@@ -1,0 +1,14 @@
+Package: ErrantAbun
+Type: Package
+Title: Calculation of an Abundance Matrix using a Randomized Distribution
+Version: 0.1.0
+Author: Jeonghoon Lee
+Maintainer: Jeonghoon Lee <jeonghoon.lee@mail.utoronto.ca>
+Description: This package contains the "errantabun" function which produces an errant abundance matrix.
+    This errant abundance matrix is calculated from an original abundance matrix and a randomized, statistical distribution.
+    This package also contains an abundance matrix collected from the Koffler Scientific Reserve: an assembly of grassland plant species.
+    This version allows for the creation of an errant abundance matrix using either a random Poisson or a random binomial distribution.
+License: N/A
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.2.9000
