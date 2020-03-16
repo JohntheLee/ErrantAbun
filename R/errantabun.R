@@ -8,7 +8,11 @@
 #'
 #' @keywords errant, abundance, distribution, Poisson, binomial, random
 #'
-#' errantabun()
+#' @export
+#'
+#' @examples
+#'
+#' errantabun
 
 
 
