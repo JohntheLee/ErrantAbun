@@ -12,7 +12,7 @@
 #' @importFrom dplyr funs rename rename_all
 #'
 #' @examples
-#' errantabun(abun_matrix = ksr, method = "Poisson", prob = 0.8)
+#' errantabun(abun_matrix = ksr_species, method = "Poisson", prob = 0.8)
 #'
 #' @export
 #' errantabun
