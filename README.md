@@ -1,6 +1,6 @@
 # ErrantAbun
 
-Jeonghoon Lee
+Author: Jeonghoon Lee
 
 Errant Abundance Matrix Function
 
