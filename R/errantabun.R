@@ -1,4 +1,4 @@
-#' Errant Abundance Matrix Function
+#' Errant abundance matrix function
 #'
 #' This function allows for the calculation of an errant abundance matrix using an original abundance matrix and a random statistical distribution of choice.
 #'
