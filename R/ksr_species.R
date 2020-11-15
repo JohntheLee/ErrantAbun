@@ -13,10 +13,10 @@
 #'
 #' @format A dataset with 280 rows and 74 variables:
 #' \describe{
-#' \item{Block}{block number}
-#' \item{Plot}{plot number}
-#' \item{Plot_size}{size of plot, in m^2}
-#' \item{species}{scientific name of species}
+#'  \item{Block}{block number}
+#'  \item{Plot}{plot number}
+#'  \item{Plot_size}{size of plot, in m^2}
+#'  \item{species}{scientific name of species}
 #' }
 #'
 #' @keywords dataset, species, abundance
