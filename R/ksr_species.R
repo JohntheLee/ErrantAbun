@@ -30,7 +30,5 @@
 #' @examples
 #' ksr_species_matrix <- ksr_species %>% filter(Size == 2) %>% unite(Plot, c(Block, Plot), remove = TRUE, sep = ".") %>% transform(Plot = as.numeric(Plot)) %>% column_to_rownames(var = "Plot") %>% data.matrix
 #'
-#' @export
-#' ksr_species
 
 "ksr_species"
