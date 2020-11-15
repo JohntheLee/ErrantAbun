@@ -2,7 +2,7 @@
 % Please edit documentation in R/errantabun.R
 \name{errantabun}
 \alias{errantabun}
-\title{Errant Abundance Matrix Function}
+\title{Errant abundance matrix function}
 \usage{
 errantabun(abun_matrix, method, prob)
 }
@@ -14,12 +14,19 @@ errantabun(abun_matrix, method, prob)
 \item{prob}{The probability weight used to construct the binomial distribution. Not relevant for Poisson distribution.}
 }
 \description{
-This function allows one to create an errant abundance matrix using an original abundance matrix and a random statistical distribution of choice.
+`errantabun()` allows for the calculation of an errant species abundance matrix
+using an original species abundance matrix and a statistical distribution of choice.
+
+`errantabun()` utilizes the rpois and the rbinom functions to create an abundance
+distribution for each species. The lambda for the Poisson distribution is the original
+abundance (vector) for each species. The size for the binomial distribution is the original
+abundance (vector) for each species.
+
+`errantabun()` takes in a matrix as input and provides a data frame as output.
 }
 \keyword{Poisson,}
 \keyword{abundance,}
 \keyword{binomial,}
 \keyword{distribution,}
 \keyword{errant,}
-\keyword{errantabun()}
 \keyword{random}
