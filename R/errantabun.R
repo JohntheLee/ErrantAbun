@@ -1,11 +1,15 @@
 #' Errant abundance matrix function
 #'
 #' @description
-#' This function allows for the calculation of an errant abundance matrix using an original abundance matrix and a random statistical distribution of choice.
+#' `errantabun()` allows for the calculation of an errant species abundance matrix
+#' using an original species abundance matrix and a statistical distribution of choice.
 #'
-#' This function utilizes the rpois and the rbinom functions to create an abundance distribution for each species. The lambda for the Poisson distribution is the original abundance (vector) for each species. The size for the binomial distribution is the original abundance (vector) for each species.
+#' `errantabun()` utilizes the rpois and the rbinom functions to create an abundance
+#' distribution for each species. The lambda for the Poisson distribution is the original
+#' abundance (vector) for each species. The size for the binomial distribution is the original
+#' abundance (vector) for each species.
 #'
-#' This function takes in a matrix as input and provides a data frame as output.
+#' `errantabun()` takes in a matrix as input and provides a data frame as output.
 #'
 #' @param abun_matrix The original abundance matrix. Columns must represent species, and rows must represent plots/blocks/etc.
 #' @param method The statistical distribution of choice: "Poisson" or "binomial".
