@@ -4,7 +4,7 @@ Type: Package
 
 Title: Calculation of an Abundance Matrix using a Randomized Distribution
 
-Version: 0.2.1
+Version: 0.2.2
 
 Authors@R: person("Jeonghoon", "Lee", email = "jeonghoon.lee@mail.utoronto.ca", role = c("aut", "cre"))
 
@@ -13,13 +13,11 @@ Description: This package contains the "errantabun" function which produces an e
     statistical distribution. Currently, the available statistical distributions are Poisson and binomial. This 
     function utilizes the rpois and the rbinom functions to create an abundance distribution for each species. 
     The lambda for the Poisson distribution is the original abundance (vector) for each species. The size for 
-    the binomial distribution is the original abundance (vector) for each species. 
-    
-    This package also contains a sample abundance matrix collected from the Koffler Scientific Reserve: an assembly 
-    of grassland plant species. Fourteen blocks serve as disparate communities of grassland plant species. Each block 
-    contains an array of different-sized plots: eight 0.5m^2, eight 1m^2, and four 2m^2 plots. This abundance dataset 
-    must be transformed into an abundance matrix, with columns representing species and rows representing the 
-    plot/block/etc. of choice.
+    the binomial distribution is the original abundance (vector) for each species. This package also contains a sample 
+    abundance matrix collected from the Koffler Scientific Reserve: an assembly of grassland plant species. Fourteen 
+    blocks serve as disparate communities of grassland plant species. Each block contains an array of different-sized 
+    plots: eight 0.5m^2, eight 1m^2, and four 2m^2 plots. This abundance dataset must be transformed into an abundance 
+    matrix, with columns representing species and rows representing the plot/block/etc. of choice.
 
 Imports: 
     dplyr,
