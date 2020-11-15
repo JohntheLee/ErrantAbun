@@ -1,7 +1,10 @@
 #' Species abundance dataset from KSR
 #'
+#' @description
 #' This species abundance dataset is collected from the Koffler Scientific Reserve at Joker's Hill (University of Toronto).
+#'
 #' Fourteen blocks serve as disparate communities of grassland plant species. Each block contains an array of different-sized plots: 8 0.5m^2, 8 1m^2, and 4 2m^2 plots.
+#'
 #' This abundance dataset must be transformed into an abundance matrix, with columns representing species and rows representing the plot/block/etc. of choice.
 #'
 #' @docType data
