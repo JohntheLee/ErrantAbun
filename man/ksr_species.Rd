@@ -19,7 +19,7 @@ Leila Forsyth. Department of Ecology and Evolutionary Biology (University of Tor
 LazyData: true
 }
 \usage{
-View(ksr_species)
+ksr_species
 }
 \description{
 This species abundance dataset is collected from the Koffler Scientific Reserve at Joker's Hill (University of Toronto).
