@@ -7,33 +7,38 @@
 \format{
 A dataset with 280 rows and 74 variables:
 \describe{
- \item{Block}{block number}
- \item{Plot}{plot number}
+ \item{Block}{block number, ranges from 1-14}
+ \item{Plot}{plot number, ranges from 1-8}
  \item{Plot_size}{size of plot, in m^2}
  \item{species}{scientific name of species}
 }
 }
 \source{
-Leila Forsyth. TBD
+Leila Forsyth. Department of Ecology and Evolutionary Biology (University of Toronto). TBD
 
 LazyData: true
 }
 \usage{
-data(ksr_species)
+View(ksr_species)
 }
 \description{
 This species abundance dataset is collected from the Koffler Scientific Reserve at Joker's Hill (University of Toronto).
 
-Fourteen blocks serve as disparate communities of grassland plant species. Each block contains an array of different-sized plots: 8 0.5m^2, 8 1m^2, and 4 2m^2 plots.
+Fourteen blocks serve as disparate communities of grassland plant species. Each block contains an array of different-sized plots: eight 0.5m^2, eight 1m^2, and four 2m^2 plots.
 
 This abundance dataset must be transformed into an abundance matrix, with columns representing species and rows representing the plot/block/etc. of choice.
 }
 \examples{
-ksr_species_matrix <- ksr_species \%>\% filter(Size == 2) \%>\% unite(Plot, c(Block, Plot), remove = TRUE, sep = ".") \%>\% transform(Plot = as.numeric(Plot)) \%>\% column_to_rownames(var = "Plot") \%>\% data.matrix
+ksr_species_matrix <- ksr_species \%>\%
+ filter(Size == 2) \%>\%
+ unite(Plot, c(Block, Plot), remove = TRUE, sep = ".") \%>\%
+ transform(Plot = as.numeric(Plot)) \%>\%
+ column_to_rownames(var = "Plot") \%>\%
+ data.matrix
 
 }
 \references{
-Leila Forsyth. TBD
+Leila Forsyth. Department of Ecology and Evolutionary Biology (University of Toronto). TBD
 }
 \keyword{abundance}
 \keyword{dataset,}

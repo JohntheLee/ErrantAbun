@@ -4,10 +4,10 @@
 \alias{errantabun}
 \title{Errant abundance matrix function}
 \usage{
-errantabun(abun_matrix, method, prob)
+errantabun(abun, method, prob)
 }
 \arguments{
-\item{abun_matrix}{The original abundance matrix. Columns must represent species, and rows must represent plots/blocks/etc.}
+\item{abun}{The original abundance matrix. Columns must represent species, and rows must represent plots/blocks/etc.}
 
 \item{method}{The statistical distribution of choice: "Poisson" or "binomial".}
 
