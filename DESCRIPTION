@@ -1,12 +1,12 @@
 Package: ErrantAbun
 Type: Package
 Title: Calculation of an Abundance Matrix using a Randomized Distribution
-Version: 0.3.0
+Version: 0.3.1
 Authors@R: person("Jeonghoon", "Lee", email = "jeonghoon.lee@mail.utoronto.ca", role = c("aut", "cre"))
 Description: This package contains the "errantabun" function which produces an errant species abundance matrix. 
     This errant species abundance matrix is calculated from an original species abundance matrix and a randomized, 
     statistical distribution. Currently, the available statistical distributions are Poisson and binomial. This 
-    function utilizes the rpois and the rbinom functions to create an abundance distribution for each species. 
+    function utilizes the "rpois" and the "rbinom" functions to create an abundance distribution for each species. 
     The lambda for the Poisson distribution is the original abundance (vector) for each species. The size for 
     the binomial distribution is the original abundance (vector) for each species. This package also contains a sample 
     abundance matrix collected from the Koffler Scientific Reserve: an assembly of grassland plant species. Fourteen 
