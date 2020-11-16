@@ -28,15 +28,6 @@ Fourteen blocks serve as disparate communities of grassland plant species. Each 
 
 This abundance dataset must be transformed into an abundance matrix, with columns representing species and rows representing the plot/block/etc. of choice.
 }
-\examples{
-ksr_species_matrix <- ksr_species \%>\%
- filter(Size == 2) \%>\%
- unite(Plot, c(Block, Plot), remove = TRUE, sep = ".") \%>\%
- transform(Plot = as.numeric(Plot)) \%>\%
- column_to_rownames(var = "Plot") \%>\%
- data.matrix
-
-}
 \references{
 Leila Forsyth. Department of Ecology and Evolutionary Biology (University of Toronto). TBD
 }
