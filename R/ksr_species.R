@@ -9,7 +9,7 @@
 #'
 #' @docType data
 #'
-#' @usage View(ksr_species)
+#' @usage ksr_species
 #'
 #' @format A dataset with 280 rows and 74 variables:
 #' \describe{
