@@ -1,7 +1,7 @@
 Package: ErrantAbun
 Type: Package
 Title: Calculation of an Abundance Matrix using a Randomized Distribution
-Version: 0.3.3
+Version: 0.3.4
 Authors@R: person("Jeonghoon", "Lee", email = "jeonghoon.lee@mail.utoronto.ca", role = c("aut", "cre"))
 Description: This package contains the "errantabun" function which produces an errant species abundance matrix. 
     This errant species abundance matrix is calculated from an original species abundance matrix and a randomized, 
