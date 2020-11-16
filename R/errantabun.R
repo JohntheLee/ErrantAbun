@@ -20,9 +20,6 @@
 #' @import magrittr stats
 #' @importFrom dplyr funs rename rename_all quo
 #'
-#' @example
-#' errantabun(abun = ksr_species, method = "Poisson", prob = 0.8)
-#'
 #' @export
 errantabun <- function(abun, method, prob){
   list_errant_abun <- list()
