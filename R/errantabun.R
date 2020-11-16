@@ -36,6 +36,6 @@ errantabun <- function(abun, method, prob){
   }
   return(data.frame((list_errant_abun)) %>%
     rename_all(funs(quo(colnames(abun)))) %>%
-    cbind(rownames(abun), .) %>%
+    cbind(rownames(abun)) %>%
     rename("Plot" = "rownames(abun)"))
 }
