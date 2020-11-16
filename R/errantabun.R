@@ -11,7 +11,7 @@
 #'
 #' `errantabun()` takes in a matrix as input and provides a data frame as output.
 #'
-#' @param abun_matrix The original abundance matrix. Columns must represent species, and rows must represent plots/blocks/etc.
+#' @param abun The original abundance matrix. Columns must represent species, and rows must represent plots/blocks/etc.
 #' @param method The statistical distribution of choice: "Poisson" or "binomial".
 #' @param prob The probability weight used to construct the binomial distribution. Not relevant for Poisson distribution.
 #'
@@ -21,24 +21,24 @@
 #' @importFrom dplyr funs rename rename_all
 #'
 #' @example
-#' errantabun(abun_matrix = ksr_species, method = "Poisson", prob = 0.8)
+#' errantabun(abun = ksr_species, method = "Poisson", prob = 0.8)
 #'
 #' @export
-errantabun <- function(abun_matrix, method, prob){
+errantabun <- function(abun, method, prob){
   list_errant_abun <- list()
-  species_list <- as.numeric(factor(colnames(abun_matrix)))
+  species_list <- as.numeric(factor(colnames(abun)))
   for(i in seq_along(species_list)){
     if(method == "Poisson"){
-      poisson_abun <- rpois(n = nrow(abun_matrix), lambda = abun_matrix[ , i])
+      poisson_abun <- rpois(n = nrow(abun), lambda = abun[ , i])
       list_errant_abun[[i]] <- poisson_abun
     }
     else if(method == "binomial"){
-      binom_abun <- rbinom(n = nrow(abun_matrix), size = abun_matrix[ , i], prob = prob)
+      binom_abun <- rbinom(n = nrow(abun), size = abun[ , i], prob = prob)
       list_errant_abun[[i]] <- binom_abun
     }
   }
   return(data.frame((list_errant_abun)) %>%
-    rename_all(funs(quo(colnames(abun_matrix)))) %>%
-    cbind(rownames(abun_matrix), .) %>%
-    rename("Plot" = "rownames(abun_matrix)"))
+    rename_all(funs(quo(colnames(abun)))) %>%
+    cbind(rownames(abun), .) %>%
+    rename("Plot" = "rownames(abun)"))
 }
