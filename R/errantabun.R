@@ -18,7 +18,7 @@
 #' @keywords errant, abundance, distribution, Poisson, binomial, random
 #'
 #' @import magrittr stats
-#' @importFrom dplyr funs rename rename_all
+#' @importFrom dplyr funs rename rename_all quo
 #'
 #' @example
 #' errantabun(abun = ksr_species, method = "Poisson", prob = 0.8)
