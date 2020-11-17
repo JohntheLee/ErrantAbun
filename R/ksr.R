@@ -11,7 +11,7 @@
 #'
 #' @usage ksr
 #'
-#' @format A dataset with 56 rows and 71 variables:
+#' @format A matrix with 56 rows and 71 variables.
 #'
 #' @keywords dataset, species, abundance, matrix
 #'
