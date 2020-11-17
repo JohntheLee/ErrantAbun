@@ -5,7 +5,7 @@
 \alias{ksr}
 \title{Species abundance matrix from Koffler Scientific Reserve}
 \format{
-A dataset with 56 rows and 71 variables:
+A matrix with 56 rows and 71 variables.
 }
 \source{
 Leila Forsyth. Department of Ecology and Evolutionary Biology (University of Toronto). TBD
