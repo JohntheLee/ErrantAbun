@@ -31,6 +31,5 @@ install.packages("magrittr")
 
 ## To-do List:
 
- - ensure usability
  - add more statistical distributions
  - finalize readme file
