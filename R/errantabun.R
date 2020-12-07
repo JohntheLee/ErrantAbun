@@ -26,16 +26,16 @@ errantabun <- function(abun, method, prob){
   species_list <- as.numeric(factor(colnames(abun)))
   for(i in seq_along(species_list)){
     if(method == "Poisson"){
-      poisson_abun <- rpois(n = nrow(abun), lambda = abun[ , i])
+      poisson_abun <- stats::rpois(n = nrow(abun), lambda = abun[ , i])
       list_errant_abun[[i]] <- poisson_abun
     }
     else if(method == "binomial"){
-      binom_abun <- rbinom(n = nrow(abun), size = abun[ , i], prob = prob)
+      binom_abun <- stats::rbinom(n = nrow(abun), size = abun[ , i], prob = prob)
       list_errant_abun[[i]] <- binom_abun
     }
   }
   return(data.frame((list_errant_abun)) %>%
-    rename_all(funs(quo(colnames(abun)))) %>%
+    dplyr::rename_all(dplyr::funs(dplyr::quo(colnames(abun)))) %>%
     cbind(rownames(abun)) %>%
-    rename("Plot" = "rownames(abun)"))
+    dplyr::rename("Plot" = "rownames(abun)"))
 }
